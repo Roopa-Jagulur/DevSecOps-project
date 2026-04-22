@@ -27,7 +27,7 @@ WORKDIR /usr/src/app/
 COPY --from=builder /usr/src/app/ ./
 RUN chown -R dsouser:dsouser /usr/src/app
 
-ENV AD_PORT 9099
+ENV AD_PORT=9099
 
 # Switch to non-root user
 USER dsouser
