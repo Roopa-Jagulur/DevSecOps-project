@@ -1,0 +1,58 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.env.*
+
+# Distribution / build files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Docker files (optional)
+Dockerfile
+.dockerignore
+
+# Tests & docs (exclude if not needed in runtime)
+tests/
+docs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Secrets / sensitive files
+*.pem
+*.key
+*.crt
+*.env
+.env.local
+.env.*.local
+
+# Node (if present in repo)
+node_modules/
+
+# Coverage reports
+.coverage
+htmlcov/
