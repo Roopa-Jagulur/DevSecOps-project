@@ -9,14 +9,15 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 
 # Install dependencies
-RUN pip install --upgrade pip setuptools && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir opentelemetry-distro
 
 # Copy application code
 COPY . .
 
 # Install OpenTelemetry dependencies
-RUN opentelemetry-bootstrap -a install
+#RUN opentelemetry-bootstrap -a install
 
 # Change ownership of app directory
 RUN chown -R dsouser:dsouser /usr/src/app
