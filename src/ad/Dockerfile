@@ -15,8 +15,8 @@ RUN chmod +x ./gradlew
 RUN ./gradlew installDist -PprotoSourceDir=./proto
 
 #####################################################
-
-FROM eclipse-temurin:21-jre
+# Final stage- using light weight image i.e jre
+FROM eclipse-temurin:21-jre 
 
 # Create non-root user and group
 RUN groupadd -r dsouser && useradd -r -g dsouser dsouser
