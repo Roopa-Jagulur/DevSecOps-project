@@ -1,0 +1,54 @@
+# 🔐 Git & VCS
+.git
+.gitignore
+
+# 🔑 Secrets & sensitive files
+.env
+.env.*
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+*.kubeconfig
+
+# 🧪 Local development & test artifacts
+*.log
+tmp/
+temp/
+*.out
+*.test
+coverage/
+*.coverprofile
+
+# 🐳 Docker-related (avoid recursion issues)
+Dockerfile
+docker-compose.yml
+docker-compose.yaml
+
+# 🧱 Build artifacts (important for Go)
+product-catalog
+*.exe
+*.bin
+
+# 🧠 IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 📦 Node / frontend (if present in repo)
+node_modules/
+npm-debug.log
+
+# 📄 OS junk
+.DS_Store
+Thumbs.db
+
+# 📚 Docs (optional)
+*.md
+
+# 🧾 CI/CD configs (optional, depending on use)
+.github/
+.gitlab-ci.yml
+Jenkinsfile
