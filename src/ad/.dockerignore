@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+
+# Node (if any frontend exists)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+build/
+out/
+target/
+
+# Gradle
+.gradle/
+gradle-app.setting
+
+# Logs
+*.log
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# Docker files themselves (optional)
+Dockerfile
+docker-compose*.yml
+
+# Test & docs (optional)
+src/test/
+docs/
+README.md
+
+# Temporary files
+tmp/
+temp/

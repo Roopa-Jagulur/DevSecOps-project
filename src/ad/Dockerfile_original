@@ -18,19 +18,11 @@ RUN ./gradlew installDist -PprotoSourceDir=./proto
 
 FROM eclipse-temurin:21-jre
 
-# Create non-root user and group
-RUN groupadd -r dsouser && useradd -r -g dsouser dsouser
-
 WORKDIR /usr/src/app/
 
-# Copy files and set ownership
 COPY --from=builder /usr/src/app/ ./
-RUN chown -R dsouser:dsouser /usr/src/app
 
 ENV AD_PORT 9099
-
-# Switch to non-root user
-USER dsouser
 
 ENTRYPOINT ["./build/install/opentelemetry-demo-ad/bin/Ad"]
 
