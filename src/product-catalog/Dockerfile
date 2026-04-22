@@ -2,9 +2,6 @@ FROM golang:1.22-alpine AS builder
 
 WORKDIR /usr/src/app/
 
-# Create non-root user
-RUN groupadd -r dsouser && useradd -r -g dsouser dsouser
-
 # Use Go build cache for dependencies
 RUN --mount=type=cache,target=/go/pkg/mod \
     --mount=type=cache,target=/root/.cache/go-build \
@@ -27,6 +24,7 @@ FROM alpine AS release
 
 WORKDIR /usr/src/app/
 
+# Create non-root user
 RUN addgroup -S dsouser && adduser -S dsouser -G dsouser
 USER dsouser
 
